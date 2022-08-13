@@ -1,7 +1,7 @@
 import os
 from flask import Flask, request
 from utils import check_count_args, foo
-import itertools
+
 app = Flask(__name__)
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -34,4 +34,4 @@ def perform_query():
     return app.response_class(res, content_type="text/plain"), 200
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
