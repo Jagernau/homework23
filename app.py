@@ -29,7 +29,7 @@ def perform_query():
     if kwargs["cmd2"] and kwargs["val2"]:
         res = foo(res, kwargs["cmd2"], kwargs["val2"])
     res = res = "\n".join(res)
-
+    f.close()
 
     return app.response_class(res, content_type="text/plain"), 200
 
